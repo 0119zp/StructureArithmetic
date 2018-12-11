@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.zpan.structure_arithmetic.arithmetic.BubbleSort;
+import com.zpan.structure_arithmetic.arithmetic.SelectionSort;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         int[] listBubble = BubbleSort.getBubbleSort(listData);
         setLogList("getBubbleSort", listBubble);
 
+        // 简单选择排序
+        int[] selectionBubble = SelectionSort.getSelectionSort(listData);
+        setLogList("getSelectionSort", selectionBubble);
+
     }
 
     /**
@@ -33,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void setLogList(String sortName, int[] list) {
         for (int i : list) {
-            Log.e("zpan", sortName + " =" + i);
+            Log.e("Arithmetic", sortName + " =" + i);
         }
     }
 }
