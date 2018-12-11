@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.zpan.structure_arithmetic.arithmetic.BinarySearch;
 import com.zpan.structure_arithmetic.arithmetic.BubbleSort;
 import com.zpan.structure_arithmetic.arithmetic.SelectionSort;
 import com.zpan.structure_arithmetic.arithmetic.SequentialSearch;
@@ -33,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         // 顺序查找
         int searchResult = SequentialSearch.getSequentialSearch(listData, 176);
         setLogListIndex(176, searchResult);
+
+        // 二分查找
+        int binarySearch = BinarySearch.getBinarySearch(listData, 97);
+        setLogListIndex(97, binarySearch);
 
     }
 
