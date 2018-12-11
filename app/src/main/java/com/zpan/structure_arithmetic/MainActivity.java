@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.zpan.structure_arithmetic.arithmetic.BubbleSort;
 import com.zpan.structure_arithmetic.arithmetic.SelectionSort;
+import com.zpan.structure_arithmetic.arithmetic.SequentialSearch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,16 +30,35 @@ public class MainActivity extends AppCompatActivity {
         int[] selectionBubble = SelectionSort.getSelectionSort(listData);
         setLogList("getSelectionSort", selectionBubble);
 
+        // 顺序查找
+        int searchResult = SequentialSearch.getSequentialSearch(listData, 176);
+        setLogListIndex(176, searchResult);
+
     }
 
     /**
      * 排序后的数组打印日志
+     *
      * @param sortName 排序方法
-     * @param list 排序后的数组
+     * @param list     排序后的数组
      */
     private void setLogList(String sortName, int[] list) {
         for (int i : list) {
             Log.e("Arithmetic", sortName + " =" + i);
+        }
+    }
+
+    /**
+     * 查找结果
+     *
+     * @param num    要查找的数字
+     * @param result 查找的结果
+     */
+    private void setLogListIndex(int num, int result) {
+        if (result == -1) {
+            Log.e("Arithmetic", "没有找到");
+        } else {
+            Log.e("Arithmetic", num + "所在的下标 =" + result);
         }
     }
 }
