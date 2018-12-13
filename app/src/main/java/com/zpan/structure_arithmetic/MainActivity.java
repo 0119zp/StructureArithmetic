@@ -1,8 +1,10 @@
 package com.zpan.structure_arithmetic;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.zpan.structure_arithmetic.arithmetic.BinarySearch;
 import com.zpan.structure_arithmetic.arithmetic.BubbleSort;
@@ -18,6 +20,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initArithmetic();
+    }
+
+    /**
+     * 题目测试
+     */
+    public void startTopic(View view) {
+        startActivity(new Intent(MainActivity.this, TopicActivity.class));
     }
 
     private void initArithmetic() {
