@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.zpan.structure_arithmetic.arithmetic.BinarySearch;
 import com.zpan.structure_arithmetic.arithmetic.BubbleSort;
+import com.zpan.structure_arithmetic.arithmetic.InsertionSort;
 import com.zpan.structure_arithmetic.arithmetic.SelectionSort;
 import com.zpan.structure_arithmetic.arithmetic.SequentialSearch;
 
@@ -24,12 +25,16 @@ public class MainActivity extends AppCompatActivity {
         int[] listData = {49, 38, 65, 97, 176, 213, 227, 50, 78, 34, 12, 164, 11, 18, 1};
 
         // 冒泡排序
-        int[] listBubble = BubbleSort.getBubbleSort(listData);
-        setLogList("getBubbleSort", listBubble);
+        int[] bubbleStor = BubbleSort.getBubbleSort(listData);
+        setLogList("getBubbleSort", bubbleStor);
 
         // 简单选择排序
-        int[] selectionBubble = SelectionSort.getSelectionSort(listData);
-        setLogList("getSelectionSort", selectionBubble);
+        int[] selectionSort = SelectionSort.getSelectionSort(listData);
+        setLogList("getSelectionSort", selectionSort);
+
+        // 插入排序
+        int[] insertionSort = InsertionSort.getInsertionSort(listData);
+        setLogList("getInsertionSort", insertionSort);
 
         // 顺序查找
         int searchResult = SequentialSearch.getSequentialSearch(listData, 176);
